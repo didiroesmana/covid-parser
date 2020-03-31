@@ -1,4 +1,4 @@
-package main
+package parser
 
 import (
 	"encoding/json"
@@ -46,10 +46,6 @@ type IndexerData struct {
 var (
 	IndexerJabar = make(map[string]*IndexerData)
 )
-
-func main() {
-	// pretty.Println(Indexer, len(Indexer))
-}
 
 func init() {
 	if err := DownloadFile("jabar.json", "https://covid19-public.digitalservice.id/api/v1/sebaran/jabar"); err != nil {
